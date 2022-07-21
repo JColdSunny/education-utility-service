@@ -13,6 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+import static com.jcs.education.tag.service.service.ValidateGetTagsRequest.validateGetTagsRequest;
+
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
@@ -22,7 +24,7 @@ public class TagService {
     GetTagsMapper getTagsMapper;
 
     public GetTagsResponse getTags(GetTagsRequest request) {
-        //TODO: validations
+        validateGetTagsRequest(request);
 
         List<Tag> tags = tagRepository.findAllById(request.getTagIdsList()).stream()
                 .map(getTagsMapper::toGrpcTag)
