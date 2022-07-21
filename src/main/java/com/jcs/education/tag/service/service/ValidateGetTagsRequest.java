@@ -6,7 +6,11 @@ import org.springframework.util.CollectionUtils;
 
 class ValidateGetTagsRequest {
 
-    public static void validateGetTagsRequest(GetTagsRequest request) {
+    private ValidateGetTagsRequest() {
+        throw new UnsupportedOperationException("ValidateGetTagsRequest is a static utility class");
+    }
+
+    static void validateGetTagsRequest(GetTagsRequest request) {
         if (CollectionUtils.isEmpty(request.getTagIdsList())) {
             throw new RequestValidationException("tag_ids must contain list of tag id");
         }
