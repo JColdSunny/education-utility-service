@@ -1,4 +1,4 @@
-package com.jcs.education.tag.service.entity;
+package com.jcs.education.utility.service.entity;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

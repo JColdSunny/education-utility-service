@@ -1,7 +1,7 @@
-package com.jcs.education.tag.service.exception.handler;
+package com.jcs.education.utility.service.exception.handler;
 
 import com.google.rpc.Status;
-import com.jcs.education.tag.service.exception.RequestValidationException;
+import com.jcs.education.utility.service.exception.RequestValidationException;
 import io.grpc.StatusRuntimeException;
 import io.grpc.protobuf.StatusProto;
 import net.devh.boot.grpc.server.advice.GrpcAdvice;
