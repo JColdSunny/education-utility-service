@@ -5,7 +5,7 @@ grpc:
 
 spring:
   application:
-    name: education-tag-service
+    name: education-utility-service
   main:
     web-application-type: NONE
   datasource:
